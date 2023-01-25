@@ -130,13 +130,13 @@ public class Duke {
                         try {
                             DateTimeFormatter formatter = DateTimeFormatter.ofPattern(("MM/dd/yyyy HHmm"));
                             LocalDateTime datetime1 = LocalDateTime.parse(deadline, formatter);
-                            System.out.println(datetime1.format(DateTimeFormatter.ofPattern("MMM d yyyy HHmm")));
+                            //System.out.println(datetime1.format(DateTimeFormatter.ofPattern("MMM d yyyy HHmm")));
 
                             task = new Deadline(info,
                                     datetime1.format(DateTimeFormatter.ofPattern("MMM d yyyy HHmm")), false);
 
                         } catch(DateTimeParseException e) {
-                            System.out.println(deadline);
+                            //System.out.println(deadline);
                             task = new Deadline(info, deadline, false);
                         }
                         listname.add(task);
@@ -168,10 +168,9 @@ public class Duke {
                                     false);
 
                         } catch(DateTimeParseException e) {
-                            System.out.println(fromtime + 11);
+                            //System.out.println(fromtime + 11);
                             task = new Event(info, fromtime, totime, false);
                         }
-
                         listname.add(task);
                         count++;
                     } catch (Exception e) {
